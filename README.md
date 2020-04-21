@@ -1,1 +1,0 @@
-# popper3-paper

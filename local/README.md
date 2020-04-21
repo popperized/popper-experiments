@@ -1,0 +1,1 @@
+# Popperized MNIST workflow
