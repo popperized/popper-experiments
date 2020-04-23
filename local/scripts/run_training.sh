@@ -14,6 +14,7 @@ if [[ -z "$CUDA_ENABLED" ]]
 then
 python ./scripts/run_training.py --no-cuda --epochs $EPOCHS 
 else
+echo "Training on GPU"
 python ./scripts/run_training.py --epochs $EPOCHS
 fi
 
