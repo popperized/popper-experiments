@@ -9,6 +9,11 @@ start=$(date +%s)
 start_fmt=$(date +%Y-%m-%d\ %r)
 echo "STARTING TIMING RUN AT $start_fmt"
 
+# Install some dependencies
+sudo apt-get install -y --no-install-recommends libnvinfer6=6.0.1-1+cuda10.1 \
+    libnvinfer-dev=6.0.1-1+cuda10.1 \
+    libnvinfer-plugin6=6.0.1-1+cuda10.1
+
 horovodrun -np 1 -H localhost:1 python ./scripts/pytorch_mnist_horovod.py --epochs $EPOCHS
 
 # end timing
