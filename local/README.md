@@ -1,12 +1,11 @@
-# Local
+# Running on a Single node
 
 Reproducible workflow for image classification using MNIST on a single machine or your local machine
 in both CUDA and Non-CUDA versions.
 
 ## Running instructions:
 
+```bash
+$ cd local/
+$ popper run -f wf.yml -c conf.yml
 ```
-cd local/
-popper run -f wf.yml
-```
-
