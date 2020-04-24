@@ -1,7 +1,7 @@
 version: 1
 steps:
 - id: run training on gpu
-  uses: docker://horovod/horovod:0.19.1-tf2.1.0-torch1.4.0-mxnet1.6.0-py3.6-gpu
-  args: ./scripts/run_training.sh
+  uses: ./horovod
+  args: ./scripts/single_gpu.sh
   env:
     EPOCHS: 1
