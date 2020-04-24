@@ -1,6 +1,6 @@
 version: 1
 steps:
-- id: run training on gpu
+- id: single gpu training
   uses: ./horovod
   args: ./scripts/single_gpu.sh
   env:
