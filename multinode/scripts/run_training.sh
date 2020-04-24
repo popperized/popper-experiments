@@ -9,14 +9,7 @@ start=$(date +%s)
 start_fmt=$(date +%Y-%m-%d\ %r)
 echo "STARTING TIMING RUN AT $start_fmt"
 
-# start training
-if [[ -z "$CUDA_ENABLED" ]]
-then
-python ./scripts/pytorch_mnist.py --no-cuda --epochs $EPOCHS 
-else
-echo "Training on GPU"
-python ./scripts/pytorch_mnist.py --epochs $EPOCHS
-fi
+horovodrun -np 1 -H localhost:1 python ./scripts/pytorch_mnist_horovod.py
 
 # end timing
 end=$(date +%s)
@@ -33,4 +26,3 @@ echo "Sample name: $result_name"
 echo "Start Time: $start_fmt"
 echo "End Time: $end_fmt"
 echo "Duration: $result"
-
