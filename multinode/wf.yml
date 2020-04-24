@@ -5,9 +5,3 @@ steps:
   args: ./scripts/run_training.sh
   env:
     EPOCHS: 1
-    
-- id: run training on cpu
-  uses: docker://horovod/horovod:0.19.1-tf2.1.0-torch1.4.0-mxnet1.6.0-py3.6-cpu
-  args: ./scripts/run_training.sh
-  env:
-    EPOCHS: 1
