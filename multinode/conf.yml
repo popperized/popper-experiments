@@ -1,0 +1,5 @@
+engine:
+    name: docker
+    options:
+      runtime: nvidia
+      privileged: True
