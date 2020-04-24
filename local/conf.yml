@@ -3,3 +3,5 @@ engine:
   options:
     runtime: nvidia
     privileged: True
+    environment:
+               CUDA_ENABLED: True

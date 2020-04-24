@@ -9,4 +9,3 @@ steps:
   args: ./scripts/run_training.sh
   env:
      EPOCHS: 1
-     CUDA_ENABLED: 1
