@@ -9,7 +9,7 @@ start=$(date +%s)
 start_fmt=$(date +%Y-%m-%d\ %r)
 echo "STARTING TIMING RUN AT $start_fmt"
 
-horovodrun -np 1 -H localhost:1 python ./scripts/pytorch_mnist_horovod.py
+horovodrun -np 1 -H localhost:1 python ./scripts/pytorch_mnist_horovod.py --epochs $EPOCHS
 
 # end timing
 end=$(date +%s)
