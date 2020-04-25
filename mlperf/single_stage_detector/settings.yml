@@ -1,0 +1,6 @@
+engine:
+    name: docker
+    options:
+        runtime: nvidia
+        privileged: true
+        shm_size: 1G

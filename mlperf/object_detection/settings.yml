@@ -1,0 +1,6 @@
+engine:
+    name: docker
+    options:
+        runtime: nvidia
+        ipc_mode: host
+        privileged: true
