@@ -113,6 +113,11 @@ def main():
         batch_size=args.test_batch_size, shuffle=True, **kwargs)
 
     model = Net().to(device)
+
+    # add early stopping callback
+    callbacks = [EarlyStopping(monitor='val_loss', patience=5)]
+    model.set_callbacks(callbacks)
+
     optimizer = optim.Adadelta(model.parameters(), lr=args.lr)
 
     scheduler = StepLR(optimizer, step_size=1, gamma=args.gamma)
