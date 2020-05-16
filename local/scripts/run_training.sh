@@ -10,13 +10,8 @@ start_fmt=$(date +%Y-%m-%d\ %r)
 echo "STARTING TIMING RUN AT $start_fmt"
 
 # start training
-if [[ -z "$CUDA_ENABLED" ]]
-then
-python ./scripts/pytorch_mnist.py --no-cuda
-else
 echo "Training on GPU"
-python ./scripts/pytorch_mnist.py
-fi
+python ./scripts/keras_mnist.py
 
 # end timing
 end=$(date +%s)
