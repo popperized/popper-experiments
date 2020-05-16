@@ -3,5 +3,3 @@ steps:
 - id: single gpu training
   uses: ./horovod
   args: ./scripts/single_gpu.sh
-  env:
-    EPOCHS: 1

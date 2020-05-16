@@ -12,10 +12,10 @@ echo "STARTING TIMING RUN AT $start_fmt"
 # start training
 if [[ -z "$CUDA_ENABLED" ]]
 then
-python ./scripts/pytorch_mnist.py --no-cuda --epochs $EPOCHS 
+python ./scripts/pytorch_mnist.py --no-cuda
 else
 echo "Training on GPU"
-python ./scripts/pytorch_mnist.py --epochs $EPOCHS
+python ./scripts/pytorch_mnist.py
 fi
 
 # end timing
