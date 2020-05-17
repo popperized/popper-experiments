@@ -1,9 +1,7 @@
-version: 1
 steps:
 # - id: download dataset
 #   uses: docker://pytorch/pytorch:1.4-cuda10.1-cudnn7-runtime
 #   args: python ./scripts/download_dataset.py
-
 - id: run training
   uses: docker://gw000/keras
-  args: ./scripts/run_training.sh
+  args: [./scripts/run_training.sh]

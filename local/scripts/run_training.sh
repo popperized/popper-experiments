@@ -10,7 +10,6 @@ start_fmt=$(date +%Y-%m-%d\ %r)
 echo "STARTING TIMING RUN AT $start_fmt"
 
 # start training
-echo "Training on GPU"
 python ./scripts/keras_mnist.py
 
 # end timing
@@ -28,4 +27,3 @@ echo "Sample name: $result_name"
 echo "Start Time: $start_fmt"
 echo "End Time: $end_fmt"
 echo "Duration: $result"
-
