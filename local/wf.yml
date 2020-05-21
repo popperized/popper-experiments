@@ -1,5 +1,5 @@
 steps:
-- id: download dataset
+- id: download-dataset
   uses: docker://gw000/keras
   args: python ./scripts/download_dataset.py
 
