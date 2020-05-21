@@ -1,5 +1,4 @@
-import torchvision
+from keras.datasets import mnist
 
-if __name__ == '__main__':
-	torchvision.datasets.MNIST('data/', download=True)
- 
+# download the data
+mnist.load_data('/workspace/mnist.npz')
