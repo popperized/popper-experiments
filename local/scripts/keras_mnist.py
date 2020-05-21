@@ -61,7 +61,7 @@ model.add(Dropout(0.5))
 model.add(Dense(num_classes, activation='softmax'))
 
 callbacks = [
-    tf.keras.callbacks.EarlyStopping(patience=2)
+    tf.keras.callbacks.EarlyStopping(patience=5)
 ]
 
 model.compile(loss=keras.losses.categorical_crossentropy,
