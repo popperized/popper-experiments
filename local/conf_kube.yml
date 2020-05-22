@@ -1,0 +1,10 @@
+engine:
+    name: docker
+    options:
+      runtime: nvidia
+
+resource_manager:
+    name: kubernetes
+    options:
+        registry: docker.io
+        registry_user: jcnitdgp25
