@@ -1,8 +1,12 @@
 steps:
 - id: download-dataset
   uses: docker://gw000/keras
-  args: python ./scripts/download_dataset.py
+  args: ["python", "./scripts/download_dataset.py"]
+
+- id: verify-dataset
+  uses: docker://alpine:3.9.5
+  args: ["./scripts/verify_dataset.sh"]
 
 - id: run-training
   uses: docker://gw000/keras
-  args: [./scripts/run_training.sh]
+  args: ["./scripts/run_training.sh"]
